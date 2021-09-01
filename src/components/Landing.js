@@ -6,7 +6,7 @@ import { getCoin } from '../services/api';
 
 const Landing = () => {
 
-    const[coins, setCoin] = useState({});
+    const[coins, setCoin] = useState([]);
     const[search, setSearch] = useState("");
 
     useEffect(() => {
@@ -25,7 +25,9 @@ const Landing = () => {
         <>
         <input type="text" value={search} onChange={changeHandler} />
         <ul>
-            
+            {
+                coins.map((coin) => <Coin key={coin.id} data={coin} />)
+            }
         </ul>
         </>
     );
