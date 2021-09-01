@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import Coin from './Coin';
 
 //Api
 import { getCoin } from '../services/api';
 
 const Landing = () => {
 
-    const[coin, setCoin] = useState({});
+    const[coins, setCoin] = useState({});
     const[search, setSearch] = useState("");
 
     useEffect(() => {
@@ -23,6 +24,9 @@ const Landing = () => {
     return (
         <>
         <input type="text" value={search} onChange={changeHandler} />
+        <ul>
+            
+        </ul>
         </>
     );
 };
