@@ -21,12 +21,14 @@ const Landing = () => {
         setSearch(event.target.value);
     }
 
+    const searchedCoins = coins.filter((coin) => coin.name.includes(search));
+
     return (
         <>
         <input type="text" value={search} onChange={changeHandler} />
         <ul>
             {
-                coins.map((coin) => <Coin key={coin.id} data={coin} />)
+                searchedCoins.map((coin) => <Coin key={coin.id} data={coin} />)
             }
         </ul>
         </>
