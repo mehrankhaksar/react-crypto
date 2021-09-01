@@ -21,7 +21,7 @@ const Landing = () => {
         setSearch(event.target.value);
     }
 
-    const searchedCoins = coins.filter((coin) => coin.name.includes(search));
+    const searchedCoins = coins.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()));
 
     return (
         <>
