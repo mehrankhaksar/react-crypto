@@ -1,0 +1,52 @@
+.coinContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid silver;
+  color: #212529;
+}
+
+.coinContainer:last-child {
+  border: none;
+}
+
+.imageContainer {
+  width: 70px;
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.name {
+  width: 150px;
+}
+
+.symbol {
+  width: 150px;
+}
+
+.current_price {
+  width: 150px;
+}
+
+.price_change {
+  width: 150px;
+  font-weight: 600;
+}
+
+.red_price_change {
+  color: rgb(255, 38, 38);
+}
+
+.green_price_change {
+  color: rgb(0, 204, 0);
+}
+
+.market_cap {
+    width: 150px;
+}

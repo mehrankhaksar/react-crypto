@@ -1,0 +1,26 @@
+.searchInput {
+  width: 400px;
+  height: 40px;
+  border: 1px solid silver;
+  border-radius: 10px;
+  outline: none;
+  background: #f6f6f6;
+  padding: 0 0.5rem;
+  font-size: 1.2rem;
+  color: rgb(85, 85, 85);
+}
+
+.coinsContainer {
+  position: relative;
+  width: 800px;
+  min-height: 100vh;
+  border: 3px solid silver;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: #f6f6f6;
+}
