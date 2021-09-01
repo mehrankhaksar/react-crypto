@@ -6,6 +6,7 @@ import { getCoin } from '../services/api';
 const Landing = () => {
 
     const[coin, setCoin] = useState({});
+    const[search, setSearch] = useState("");
 
     useEffect(() => {
         const fetchAPI = async () => {
@@ -15,10 +16,14 @@ const Landing = () => {
         fetchAPI();
     }, []);
 
+    const changeHandler = (event) => {
+        setSearch(event.target.value);
+    }
+
     return (
-        <div>
-            
-        </div>
+        <>
+        <input type="text" value={search} onChange={changeHandler} />
+        </>
     );
 };
 
