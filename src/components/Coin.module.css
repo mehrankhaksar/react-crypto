@@ -1,7 +1,7 @@
 .coinContainer {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid silver;
@@ -36,6 +36,7 @@
 
 .price_change {
   width: 150px;
+  font-weight: 600;
 }
 
 .red_price_change {
@@ -44,4 +45,8 @@
 
 .green_price_change {
   color: rgb(0, 204, 0);
+}
+
+.market_cap {
+    width: 150px;
 }

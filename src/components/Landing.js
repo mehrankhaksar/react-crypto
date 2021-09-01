@@ -26,7 +26,7 @@ const Landing = () => {
 
     return (
         <>
-        <input className={styles.searchInput} type="text" value={search} onChange={changeHandler} />
+        <input className={styles.searchInput} type="text" value={search} placeholder="Search..." onChange={changeHandler} />
         <ul className={styles.coinsContainer}>
             {
                 searchedCoins.map((coin) => <Coin key={coin.id} data={coin} />)
