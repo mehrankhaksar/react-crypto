@@ -4,9 +4,11 @@ import Coin from './Coin';
 
 //Api
 import { getCoin } from '../services/api';
+import Loading from './Loading';
 
 const Landing = () => {
 
+    const[loading, setLoading] = useState(true);
     const[coins, setCoin] = useState([]);
     const[search, setSearch] = useState("");
 
@@ -14,6 +16,7 @@ const Landing = () => {
         const fetchAPI = async () => {
             const data = await getCoin();
             setCoin(data);
+            setLoading(false);
         }
         fetchAPI();
     }, []);
@@ -28,8 +31,9 @@ const Landing = () => {
         <>
         <input className={styles.searchInput} type="text" value={search} placeholder="Search..." onChange={changeHandler} />
         <ul className={styles.coinsContainer}>
-            {
-                searchedCoins.map((coin) => <Coin key={coin.id} data={coin} />)
+            {(loading) ? 
+            <Loading /> : 
+            searchedCoins.map((coin) => <Coin key={coin.id} data={coin} />)
             }
         </ul>
         </>
