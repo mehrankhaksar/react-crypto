@@ -1,0 +1,18 @@
+.skeleton {
+  width: 100%;
+  min-height: 100vh;
+  z-index: 99;
+  opacity: 0.4;
+  border-radius: 16px;
+  animation: skeletonLoading 1s linear infinite alternate;
+}
+
+@keyframes skeletonLoading {
+  0% {
+    background: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background: hsl(200, 20%, 95%);
+  }
+}
