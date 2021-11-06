@@ -1,10 +1,8 @@
-import React from 'react';
-import styles from './Loading.module.css';
+import React from "react";
+import styles from "./Loading.module.css";
 
 const Loading = () => {
-    return (
-        <div className={styles.skeleton}></div>
-    );
+  return <div className={styles.skeleton}></div>;
 };
 
 export default Loading;
